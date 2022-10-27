@@ -6,9 +6,9 @@
 
 @guest
     <div class="rounded-3 bg--gradient p-4 text-center mb-4">
-        <h3 class="fw-normal text-white">@lang('JOIN OUR COMMUNITY')</h3>
+        <h3 class="fw-normal text-white">@lang('GABUNG KOMUNITAS PENDAKIAN')</h3>
         <p class="text-white fs--14px mt-3">{{ __(@$register->data_values->text) }}</p>
-        <a href="{{ route('user.register') }}" class="btn btn--base mt-4">@lang('Registration Now')</a>
+        <a href="{{ route('user.register') }}" class="btn btn--base mt-4">@lang('GABUNG SEKARNG')</a>
     </div>
 @endguest
 
