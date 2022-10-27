@@ -1,1 +1,1 @@
-<?php $timezone = 'Etc/GMT+7' ?>
+<?php $timezone = 'Etc/GMT+7';
