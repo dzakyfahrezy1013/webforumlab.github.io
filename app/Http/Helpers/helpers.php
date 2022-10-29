@@ -35,8 +35,8 @@ function sidebarVariation(){
 
 function systemDetails()
 {
-    $system['name'] = 'forumlab';
-    $system['version'] = '1.2';
+    $system['name'] = 'webforum';
+    $system['version'] = '1.1';
     return $system;
 }
 
