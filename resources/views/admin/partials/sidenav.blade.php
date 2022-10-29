@@ -1,12 +1,9 @@
-<div class="sidebar {{ sidebarVariation()['selector'] }} {{ sidebarVariation()['sidebar'] }} {{ @sidebarVariation()['overlay'] }} {{ @sidebarVariation()['opacity'] }}"
-     data-background="{{getImage('assets/admin/images/sidebar/2.jpg','400x800')}}">
+<div class="sidebar {{ sidebarVariation()['selector'] }} {{ sidebarVariation()['sidebar'] }} {{ @sidebarVariation()['overlay'] }} {{ @sidebarVariation()['opacity'] }}" data-background="{{getImage('assets/admin/images/sidebar/2.jpg','400x800')}}">
     <button class="res-sidebar-close-btn"><i class="las la-times"></i></button>
     <div class="sidebar__inner">
         <div class="sidebar__logo">
-            <a href="{{route('admin.dashboard')}}" class="sidebar__main-logo"><img
-                    src="{{getImage(imagePath()['logoIcon']['path'] .'/logo.png')}}" alt="@lang('image')"></a>
-            <a href="{{route('admin.dashboard')}}" class="sidebar__logo-shape"><img
-                    src="{{getImage(imagePath()['logoIcon']['path'] .'/favicon.png')}}" alt="@lang('image')"></a>
+            <a href="{{route('admin.dashboard')}}" class="sidebar__main-logo"><img src="{{getImage(imagePath()['logoIcon']['path'] .'/logo.png')}}" alt="@lang('image')"></a>
+            <a href="{{route('admin.dashboard')}}" class="sidebar__logo-shape"><img src="{{getImage(imagePath()['logoIcon']['path'] .'/faviconpendakian.png')}}" alt="@lang('image')"></a>
             <button type="button" class="navbar__expand"></button>
         </div>
 
@@ -44,11 +41,11 @@
                     <a href="javascript:void(0)" class="{{menuActive('admin.post*',3)}}">
                         <i class="menu-icon la la-blog"></i>
                         <span class="menu-title">@lang('Topics') </span>
-                            @if($pending_post)
-                                <span class="menu-badge pill bg--primary ml-auto">
-                                    <i class="fa fa-exclamation"></i>
-                                </span>
-                             @endif
+                        @if($pending_post)
+                        <span class="menu-badge pill bg--primary ml-auto">
+                            <i class="fa fa-exclamation"></i>
+                        </span>
+                        @endif
                     </a>
                     <div class="sidebar-submenu {{menuActive('admin.post*',2)}} ">
                         <ul>
@@ -57,7 +54,7 @@
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">@lang('Pending Topics')</span>
                                     @if($pending_post)
-                                        <span class="menu-badge pill bg--primary ml-auto">{{$pending_post}}</span>
+                                    <span class="menu-badge pill bg--primary ml-auto">{{$pending_post}}</span>
                                     @endif
                                 </a>
                             </li>
@@ -93,9 +90,9 @@
                         <span class="menu-title">@lang('Manage Users')</span>
 
                         @if($banned_users_count > 0 || $email_unverified_users_count > 0 || $sms_unverified_users_count > 0)
-                            <span class="menu-badge pill bg--primary ml-auto">
-                                <i class="fa fa-exclamation"></i>
-                            </span>
+                        <span class="menu-badge pill bg--primary ml-auto">
+                            <i class="fa fa-exclamation"></i>
+                        </span>
                         @endif
                     </a>
                     <div class="sidebar-submenu {{menuActive('admin.users*',2)}} ">
@@ -118,7 +115,7 @@
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">@lang('Banned Users')</span>
                                     @if($banned_users_count)
-                                        <span class="menu-badge pill bg--primary ml-auto">{{$banned_users_count}}</span>
+                                    <span class="menu-badge pill bg--primary ml-auto">{{$banned_users_count}}</span>
                                     @endif
                                 </a>
                             </li>
@@ -129,8 +126,7 @@
                                     <span class="menu-title">@lang('Email Unverified')</span>
 
                                     @if($email_unverified_users_count)
-                                        <span
-                                            class="menu-badge pill bg--primary ml-auto">{{$email_unverified_users_count}}</span>
+                                    <span class="menu-badge pill bg--primary ml-auto">{{$email_unverified_users_count}}</span>
                                     @endif
                                 </a>
                             </li>
@@ -140,8 +136,7 @@
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">@lang('SMS Unverified')</span>
                                     @if($sms_unverified_users_count)
-                                        <span
-                                            class="menu-badge pill bg--primary ml-auto">{{$sms_unverified_users_count}}</span>
+                                    <span class="menu-badge pill bg--primary ml-auto">{{$sms_unverified_users_count}}</span>
                                     @endif
                                 </a>
                             </li>
@@ -161,11 +156,10 @@
                     <a href="javascript:void(0)" class="{{menuActive('admin.ticket*',3)}}">
                         <i class="menu-icon la la-ticket"></i>
                         <span class="menu-title">@lang('Support Ticket') </span>
-                        @if(0 < $pending_ticket_count)
-                            <span class="menu-badge pill bg--primary ml-auto">
-                                <i class="fa fa-exclamation"></i>
+                        @if(0 < $pending_ticket_count) <span class="menu-badge pill bg--primary ml-auto">
+                            <i class="fa fa-exclamation"></i>
                             </span>
-                        @endif
+                            @endif
                     </a>
                     <div class="sidebar-submenu {{menuActive('admin.ticket*',2)}} ">
                         <ul>
@@ -181,8 +175,7 @@
                                     <i class="menu-icon las la-dot-circle"></i>
                                     <span class="menu-title">@lang('Pending Ticket')</span>
                                     @if($pending_ticket_count)
-                                        <span
-                                            class="menu-badge pill bg--primary ml-auto">{{$pending_ticket_count}}</span>
+                                    <span class="menu-badge pill bg--primary ml-auto">{{$pending_ticket_count}}</span>
                                     @endif
                                 </a>
                             </li>
@@ -226,8 +219,7 @@
                 </li>
 
                 <li class="sidebar-menu-item  {{menuActive(['admin.language.manage','admin.language.key'])}}">
-                    <a href="{{route('admin.language.manage')}}" class="nav-link"
-                       data-default-url="{{ route('admin.language.manage') }}">
+                    <a href="{{route('admin.language.manage')}}" class="nav-link" data-default-url="{{ route('admin.language.manage') }}">
                         <i class="menu-icon las la-language"></i>
                         <span class="menu-title">@lang('Language') </span>
                     </a>
@@ -317,17 +309,17 @@
                     <div class="sidebar-submenu {{menuActive('admin.frontend.sections*',2)}} ">
                         <ul>
                             @php
-                               $lastSegment =  collect(request()->segments())->last();
+                            $lastSegment = collect(request()->segments())->last();
                             @endphp
                             @foreach(getPageSections(true) as $k => $secs)
-                                @if($secs['builder'])
-                                    <li class="sidebar-menu-item  @if($lastSegment == $k) active @endif ">
-                                        <a href="{{ route('admin.frontend.sections',$k) }}" class="nav-link">
-                                            <i class="menu-icon las la-dot-circle"></i>
-                                            <span class="menu-title">{{__($secs['name'])}}</span>
-                                        </a>
-                                    </li>
-                                @endif
+                            @if($secs['builder'])
+                            <li class="sidebar-menu-item  @if($lastSegment == $k) active @endif ">
+                                <a href="{{ route('admin.frontend.sections',$k) }}" class="nav-link">
+                                    <i class="menu-icon las la-dot-circle"></i>
+                                    <span class="menu-title">{{__($secs['name'])}}</span>
+                                </a>
+                            </li>
+                            @endif
                             @endforeach
 
 
@@ -346,8 +338,7 @@
                 </li>
 
                 <li class="sidebar-menu-item  {{menuActive('admin.system.info')}}">
-                    <a href="{{route('admin.system.info')}}" class="nav-link"
-                       data-default-url="{{ route('admin.system.info') }}">
+                    <a href="{{route('admin.system.info')}}" class="nav-link" data-default-url="{{ route('admin.system.info') }}">
                         <i class="menu-icon las la-server"></i>
                         <span class="menu-title">@lang('System Information') </span>
                     </a>
@@ -368,8 +359,7 @@
                 </li>
 
                 <li class="sidebar-menu-item  {{menuActive('admin.request.report')}}">
-                    <a href="{{route('admin.request.report')}}" class="nav-link"
-                       data-default-url="{{ route('admin.request.report') }}">
+                    <a href="{{route('admin.request.report')}}" class="nav-link" data-default-url="{{ route('admin.request.report') }}">
                         <i class="menu-icon las la-bug"></i>
                         <span class="menu-title">@lang('Report & Request') </span>
                     </a>

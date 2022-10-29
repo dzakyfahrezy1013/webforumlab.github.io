@@ -1,17 +1,19 @@
 <!-- meta tags and other links -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ $general->sitename($pageTitle ?? '404 | page not found') }}</title>
-  <link rel="shortcut icon" type="image/png" href="{{getImage(imagePath()['logoIcon']['path'] .'/favicon.png')}}">
+  <link rel="shortcut icon" type="image/png" href="{{getImage(imagePath()['logoIcon']['path'] .'/faviconpendakian.png')}}">
   <!-- bootstrap 4  -->
   <link rel="stylesheet" href="{{ asset('assets/errors/css/bootstrap.min.css') }}">
   <!-- dashdoard main css -->
   <link rel="stylesheet" href="{{ asset('assets/errors/css/main.css') }}">
 </head>
-  <body>
+
+<body>
 
 
   <!-- error-404 start -->
@@ -29,6 +31,7 @@
   </div>
   <!-- error-404 end -->
 
-  
-  </body>
+
+</body>
+
 </html>
