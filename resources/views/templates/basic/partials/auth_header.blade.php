@@ -4,7 +4,7 @@
      <div class="container-fluid">
        <nav class="navbar navbar-expand-xl p-0 align-items-center">
          <a class="site-logo site-title" href="{{ route('home') }}">
-           <img src="{{getImage(imagePath()['logoIcon']['path'] .'/logoiconpendakian.png')}}" alt="logo">
+           <img src="{{getImage(imagePath()['logoIcon']['path'] .'/logokomunitas.png')}}" alt="logo">
          </a>
          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
            <span class="menu-toggle"></span>
